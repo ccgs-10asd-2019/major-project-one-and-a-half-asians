@@ -8,13 +8,29 @@
         Title="MainWindow" Height="450" Width="621.403">
     <Grid>
         <Image HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="616" Source="MainWindow/MainBackground.jpg"/>
-        <Image HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="616" Source="MainWindow/MainLayout.jpg"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="22,26,0,0" VerticalAlignment="Top" Width="100" Source="MainWindow/Text.png"/>
         <Button HorizontalAlignment="Left" Margin="124,22,0,0" VerticalAlignment="Top" Width="104" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Image Source="MainWindow/Todo.png"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="20,22,0,0" VerticalAlignment="Top" Width="102" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
-            <Image Source="MainWindow/Text.png"/>
+        <Button HorizontalAlignment="Left" Margin="20,22,0,0" VerticalAlignment="Top" Width="99" Height="88" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Source="MainWindow/Text.png" Height="90" Width="102"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="240,28,0,0" VerticalAlignment="Top" Width="99" Height="88" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Source="MainWindow/Timetable.png" Height="78" Width="99"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="340,20,0,0" VerticalAlignment="Top" Width="116" Height="108" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Source="MainWindow/Contacts.png" Height="98" Width="106" RenderTransformOrigin="0.346,0.44"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="446,20,0,0" VerticalAlignment="Top" Width="116" Height="108" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Source="MainWindow/Browser.png" Height="98" Width="106" RenderTransformOrigin="0.346,0.44"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" Width="114" Height="107" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Source="MainWindow/Info.png" Height="98" Width="106" RenderTransformOrigin="0.346,0.44"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="129,143,0,0" VerticalAlignment="Top" Width="104" Height="76" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Source="MainWindow/Mail.png" Height="83" Width="74" RenderTransformOrigin="0.346,0.44"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="233,126,0,0" VerticalAlignment="Top" Width="111" Height="103" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Source="MainWindow/Nexus.png" Height="116" Width="114" RenderTransformOrigin="0.346,0.44"/>
         </Button>
     </Grid>
 </Window>
