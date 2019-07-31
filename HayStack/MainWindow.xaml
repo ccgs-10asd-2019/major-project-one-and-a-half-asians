@@ -1,16 +1,20 @@
-﻿<Window x:Class="HayStack.MainWindow"
+﻿<Window x:Class="Hey_Stack_Project.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HayStack"
+        xmlns:local="clr-namespace:Hey_Stack_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="621.403">
     <Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="435,216,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="258,85,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBlock HorizontalAlignment="Left" Margin="333,276,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="704,310,0,0" VerticalAlignment="Top"/>
-
+        <Image HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="616" Source="MainWindow/MainBackground.jpg"/>
+        <Image HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="616" Source="MainWindow/MainLayout.jpg"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="22,26,0,0" VerticalAlignment="Top" Width="100" Source="MainWindow/Text.png"/>
+        <Button HorizontalAlignment="Left" Margin="124,22,0,0" VerticalAlignment="Top" Width="104" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Source="MainWindow/Todo.png"/>
+        </Button>
+        <Button HorizontalAlignment="Left" Margin="20,22,0,0" VerticalAlignment="Top" Width="102" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Image Source="MainWindow/Text.png"/>
+        </Button>
     </Grid>
 </Window>
