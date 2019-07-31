@@ -94,5 +94,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\icons8-contacts-500.png" />
+    <Resource Include="MainWindow\icons8-file-500.png" />
+    <Resource Include="MainWindow\icons8-upload-mail-128.png" />
+    <Resource Include="MainWindow\info1.png" />
+    <Resource Include="MainWindow\textapp1.png" />
+    <Resource Include="MainWindow\tickaBox.png" />
+    <Resource Include="MainWindow\timetable.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
