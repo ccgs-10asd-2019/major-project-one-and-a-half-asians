@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HayStackCode.Properties
+namespace HayStack.Properties
 {
 
 
