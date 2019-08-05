@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HayStack
+namespace Hey_Stack_Project
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,5 +24,6 @@ namespace HayStack
         {
             InitializeComponent();
         }
+
     }
 }
