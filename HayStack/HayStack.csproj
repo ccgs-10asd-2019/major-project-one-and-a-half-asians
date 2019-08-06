@@ -94,5 +94,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\Contacts.png" />
+    <Resource Include="MainWindow\Browser.png" />
+    <Resource Include="MainWindow\Mail.png" />
+    <Resource Include="MainWindow\Info.png" />
+    <Resource Include="MainWindow\Text.png" />
+    <Resource Include="MainWindow\Todo.png" />
+    <Resource Include="MainWindow\Timetable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\MainBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\MainLayout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\Nexus.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
