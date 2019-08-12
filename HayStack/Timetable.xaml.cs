@@ -1,5 +1,4 @@
-﻿using HayStack;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Hey_Stack_Project
+namespace HayStack
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Timetable.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Timetable : Page
     {
-        public MainWindow()
+        public Timetable()
         {
             InitializeComponent();
-            
-
         }
-
-        private void TimetableBtnClick(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(new Timetable());
-            this.Frame.Navigate(new Uri("Timetable.xaml", UriKind.Relative));
-        }
-
-        //need to do page navigation
     }
 }
