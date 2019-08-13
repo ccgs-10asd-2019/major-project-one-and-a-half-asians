@@ -28,9 +28,20 @@ namespace Hey_Stack_Project
 
         private void TimetableBtnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(new Timetable());
-            this.Frame.Navigate(new Uri("Timetable.xaml", UriKind.Relative));
+            ShowMyTimetable();
         }
+        private void ShowMyTimetable()
+        {
+            Timetable MyPage = new Timetable();
+            var TimetableContents = Content;
+            Content = MyPage;
+            MyPage.ladder += (object sender, EventArgs e) =>
+            {
+                Content = TimetableContents;
+            };
+        }
+
+
         private void ChatAppBtnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(new Chatapp());
@@ -39,7 +50,17 @@ namespace Hey_Stack_Project
 
         private void ToDoBtnClick(object sender, RoutedEventArgs e)
         {
-            ShowMyPage();
+            ShowMyToDo();
+        }
+        private void ShowMyToDo()
+        {
+            Todo MyPage = new Todo();
+            var TodoContents = Content;
+            Content = MyPage;
+            MyPage.ladder += (object sender, EventArgs e) =>
+            {
+                Content = TodoContents;
+            };
         }
 
         private void ContactsBtnClick(object sender, RoutedEventArgs e)
@@ -48,21 +69,22 @@ namespace Hey_Stack_Project
             this.Frame.Navigate(new Uri("Contacts.xaml", UriKind.Relative));
         }
 
+
         private void InfoBtnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(new Info());
-            this.Frame.Navigate(new Uri("Info.xaml", UriKind.Relative));
+            ShowMyInfo();
         }
-
-        private void ShowMyPage()
+        private void ShowMyInfo()
         {
-            Todo MyPage = new Todo();
-            var contentCopy = Content;
+            Info MyPage = new Info();
+            var InfoContents = Content;
             Content = MyPage;
             MyPage.ladder += (object sender, EventArgs e) =>
             {
-                Content = contentCopy;
+                Content = InfoContents;
             };
         }
+
+
     }
 }

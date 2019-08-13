@@ -20,9 +20,20 @@ namespace HayStack
     /// </summary>
     public partial class Info : Page
     {
+        public EventHandler ladder;
         public Info()
         {
             InitializeComponent();
+        }
+
+        public void ClimbLadder()
+        {
+            ladder(this, EventArgs.Empty);
+        }
+
+        private void Info_Return(object sender, RoutedEventArgs e)
+        {
+            ClimbLadder();
         }
     }
 }

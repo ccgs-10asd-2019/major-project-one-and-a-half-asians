@@ -20,9 +20,20 @@ namespace HayStack
     /// </summary>
     public partial class Timetable : Page
     {
+        public EventHandler ladder;
         public Timetable()
         {
             InitializeComponent();
+        }
+
+        public void ClimbLadder()
+        {
+            ladder(this, EventArgs.Empty);
+        }
+
+        private void Timetable_Return(object sender, RoutedEventArgs e)
+        {
+            ClimbLadder();
         }
     }
 }
