@@ -13,11 +13,11 @@
         <Grid>
 
             <Image HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="616" Source="MainWindow/MainBackground.jpg"/>
-            
+
             <Button x:Name="ChatAppButton" HorizontalAlignment="Left" Margin="20,22,0,0" VerticalAlignment="Top" Width="99" Height="88" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ChatAppBtnClick">
                 <Image x:Name="ChatApp" Source="MainWindow/Text.png" Height="90" Width="102"/>
             </Button>
-            
+
             <Button x:Name="ToDoButton" HorizontalAlignment="Left" Margin="124,22,0,0" VerticalAlignment="Top" Width="104" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ToDoBtnClick">
                 <Image x:Name="ToDo" Source="MainWindow/Todo.png"/>
             </Button>
@@ -29,11 +29,11 @@
             <Button x:Name="ContactsButton" HorizontalAlignment="Left" Margin="340,20,0,0" VerticalAlignment="Top" Width="116" Height="108" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ContactsBtnClick">
                 <Image x:Name="Contacts" Source="MainWindow/Contacts.png" Height="98" Width="106" RenderTransformOrigin="0.346,0.44"/>
             </Button>
-            
+
             <Button x:Name="InternetButton" HorizontalAlignment="Left" Margin="446,20,0,0" VerticalAlignment="Top" Width="116" Height="108" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
                 <Image x:Name="Internet" Source="MainWindow/Browser.png" Height="98" Width="106" RenderTransformOrigin="0.346,0.44"/>
             </Button>
-            
+
             <Button x:Name="InfoButton" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="114" Height="108" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="InfoBtnClick">
                 <Image x:Name="Info" Source="MainWindow/Info.png" Height="98" Width="106" RenderTransformOrigin="0.346,0.44"/>
             </Button>
@@ -45,6 +45,7 @@
             <Button x:Name="NexusButton" HorizontalAlignment="Left" Margin="233,133,0,0" VerticalAlignment="Top" Width="107" Height="103" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="OpenNexus">
                 <Image x:Name="Nexus" Source="MainWindow/Nexus.png" Height="102" Width="114" RenderTransformOrigin="0.346,0.44"/>
             </Button>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="455,330,0,0" VerticalAlignment="Top" Width="86" Height="26"/>
 
         </Grid>
     </StackPanel>

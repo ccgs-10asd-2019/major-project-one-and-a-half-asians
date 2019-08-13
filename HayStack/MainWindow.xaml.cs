@@ -29,7 +29,8 @@ namespace Hey_Stack_Project
 
         private void TimetableBtnClick(object sender, RoutedEventArgs e)
         {
-            ShowMyTimetable();
+            System.Diagnostics.Process.Start("https://nexus.ccgs.wa.edu.au/timetable");
+            //ShowMyTimetable();
         }
         private void ShowMyTimetable()
         {
