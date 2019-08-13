@@ -65,8 +65,17 @@ namespace Hey_Stack_Project
 
         private void ContactsBtnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(new Contacts());
-            this.Frame.Navigate(new Uri("Contacts.xaml", UriKind.Relative));
+            ShowMyContacts();
+        }
+        private void ShowMyContacts()
+        {
+            Contacts MyPage = new Contacts();
+            var ContactsContents = Content;
+            Content = MyPage;
+            MyPage.ladder += (object sender, EventArgs e) =>
+            {
+                Content = ContactsContents;
+            };
         }
 
 

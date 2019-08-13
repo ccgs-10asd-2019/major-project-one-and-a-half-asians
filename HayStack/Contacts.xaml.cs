@@ -20,9 +20,20 @@ namespace HayStack
     /// </summary>
     public partial class Contacts : Page
     {
+        public EventHandler ladder;
         public Contacts()
         {
             InitializeComponent();
+        }
+
+        public void ClimbLadder()
+        {
+            ladder(this, EventArgs.Empty);
+        }
+
+        private void Contacts_Return(object sender, RoutedEventArgs e)
+        {
+            ClimbLadder();
         }
     }
 }

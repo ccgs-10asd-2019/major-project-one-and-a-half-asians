@@ -7,10 +7,12 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Contacts">
+    <StackPanel>
+        <Grid>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="800"/>
+            <Label Content="Contacts" HorizontalAlignment="Left" Margin="453,239,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="ContactsReturn" Content="RETURN" HorizontalAlignment="Left" Margin="57,154,0,0" VerticalAlignment="Top" Width="280" Height="212" Click="Contacts_Return"/>
 
-    <Grid>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="800"/>
-        <Label Content="Contacts" HorizontalAlignment="Left" Margin="435,207,0,0" VerticalAlignment="Top"/>
-
-    </Grid>
+        </Grid>
+    </StackPanel>
 </Page>
