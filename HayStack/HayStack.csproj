@@ -147,5 +147,8 @@
   <ItemGroup>
     <Resource Include="MainWindow\Nexus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\ToDoTemplate.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

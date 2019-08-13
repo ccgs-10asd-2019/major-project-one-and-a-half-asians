@@ -5,13 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HayStack"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Todo">
+      d:DesignHeight="450"
+      Title="Todo" Width="720">
     <StackPanel>
-        <Grid>
-            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="800"/>
-            <Label Content="ToDo" HorizontalAlignment="Left" Margin="453,239,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="TodoReturn" Content="RETURN" HorizontalAlignment="Left" Margin="57,154,0,0" VerticalAlignment="Top" Width="280" Height="212" Click="Todo_Return"/>
+        <Grid >
+            <Image HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="720" Source="MainWindow/ToDoTemplate.jpg"/>
+            <Button x:Name="TodoReturn" Click="Todo_Return" Opacity="0" FocusVisualStyle="{x:Null}" Margin="659,336,10,61"/>
 
         </Grid>
     </StackPanel>
