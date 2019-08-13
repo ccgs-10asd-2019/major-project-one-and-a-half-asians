@@ -1,6 +1,7 @@
 ﻿using HayStack;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -94,6 +95,14 @@ namespace Hey_Stack_Project
             };
         }
 
+        private void OpenMail(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("mailto://"));
+        }
 
+        private void OpenNexus(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://nexus.ccgs.wa.edu.au/");
+        }
     }
 }

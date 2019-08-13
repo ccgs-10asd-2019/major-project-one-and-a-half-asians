@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,10 @@ namespace HayStack
         private void Todo_Return(object sender, RoutedEventArgs e)
         {
             ClimbLadder();
+        }
+
+        private void Test(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
