@@ -20,9 +20,20 @@ namespace HayStack
     /// </summary>
     public partial class Todo : Page
     {
+        public EventHandler ladder;
         public Todo()
         {
             InitializeComponent();
+        }
+
+        public void ClimbLadder()
+        {
+            ladder(this, EventArgs.Empty);
+        }
+
+        private void Todo_Return(object sender, RoutedEventArgs e)
+        {
+            ClimbLadder();
         }
     }
 }

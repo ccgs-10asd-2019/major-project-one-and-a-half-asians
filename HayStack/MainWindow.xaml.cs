@@ -39,8 +39,7 @@ namespace Hey_Stack_Project
 
         private void ToDoBtnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(new Todo());
-            this.Frame.Navigate(new Uri("Todo.xaml", UriKind.Relative));
+            ShowMyPage();
         }
 
         private void ContactsBtnClick(object sender, RoutedEventArgs e)
@@ -55,6 +54,15 @@ namespace Hey_Stack_Project
             this.Frame.Navigate(new Uri("Info.xaml", UriKind.Relative));
         }
 
-        //need to do page navigation
+        private void ShowMyPage()
+        {
+            Todo MyPage = new Todo();
+            var contentCopy = Content;
+            Content = MyPage;
+            MyPage.ladder += (object sender, EventArgs e) =>
+            {
+                Content = contentCopy;
+            };
+        }
     }
 }
