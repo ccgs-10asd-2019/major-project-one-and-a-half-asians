@@ -116,5 +116,10 @@ namespace Hey_Stack_Project
         {
             System.Diagnostics.Process.Start("https://nexus.ccgs.wa.edu.au/");
         }
+
+        private void OpenGoogle(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.google.com/");
+        }
     }
 }
