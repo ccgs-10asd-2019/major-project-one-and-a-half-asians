@@ -20,9 +20,21 @@ namespace HayStack
     /// </summary>
     public partial class Chatapp : Page
     {
+        public EventHandler ladder;
         public Chatapp()
         {
             InitializeComponent();
         }
+
+        public void ClimbLadder()
+        {
+            ladder(this, EventArgs.Empty);
+        }
+
+        private void Chatapp_Return(object sender, RoutedEventArgs e)
+        {
+            ClimbLadder();
+        }
+
     }
 }

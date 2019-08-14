@@ -10,7 +10,8 @@
 
     <Grid>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="800"/>
-        <Label Content="ChatApp" HorizontalAlignment="Left" Margin="299,226,0,0" VerticalAlignment="Top" Height="28" Width="79"/>
+        <Label Content="ChatApp" HorizontalAlignment="Left" Margin="377,226,0,0" VerticalAlignment="Top" Height="28" Width="79"/>
+        <Button x:Name="ChatappReturn" Content="RETURN" HorizontalAlignment="Left" Margin="42,154,0,0" VerticalAlignment="Top" Width="257" Height="170" Click="Chatapp_Return"/>
 
     </Grid>
 </Page>

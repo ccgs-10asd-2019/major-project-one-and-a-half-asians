@@ -32,23 +32,34 @@ namespace Hey_Stack_Project
             System.Diagnostics.Process.Start("https://nexus.ccgs.wa.edu.au/timetable");
             //ShowMyTimetable();
         }
-        private void ShowMyTimetable()
-        {
-            Timetable MyPage = new Timetable();
-            var TimetableContents = Content;
-            Content = MyPage;
-            MyPage.ladder += (object sender, EventArgs e) =>
-            {
-                Content = TimetableContents;
-            };
-        }
+        //private void ShowMyTimetable()
+        //{
+        //    Timetable MyPage = new Timetable();
+        //    var TimetableContents = Content;
+        //    Content = MyPage;
+        //    MyPage.ladder += (object sender, EventArgs e) =>
+        //    {
+        //        Content = TimetableContents;
+        //    };
+        //}
 
 
         private void ChatAppBtnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(new Chatapp());
-            this.Frame.Navigate(new Uri("ChatApp.xaml", UriKind.Relative));
+            ShowMyChatApp();
         }
+
+        private void ShowMyChatApp()
+        {
+            Chatapp MyPage = new Chatapp();
+            var ChatappContents = Content;
+            Content = MyPage;
+            MyPage.ladder += (object sender, EventArgs e) =>
+            {
+                Content = ChatappContents;
+            };
+        }
+
 
         private void ToDoBtnClick(object sender, RoutedEventArgs e)
         {
