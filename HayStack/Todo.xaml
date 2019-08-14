@@ -10,7 +10,14 @@
     <StackPanel>
         <Grid >
             <Image HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="720" Source="MainWindow/ToDoTemplate.jpg"/>
-            <Button x:Name="TodoReturn" Click="Todo_Return" Opacity="0" FocusVisualStyle="{x:Null}" Margin="659,336,10,61"/>
+            <Button x:Name="TodoReturn" Click="Todo_Return" Opacity="0" Margin="659,336,10,61"/>
+            <Button x:Name="MonOpener" Click="Todo_Return" Opacity="0" Margin="294,10,29,382"/>
+            <Button x:Name="Tueopener" Click="Todo_Return" Opacity="0" Margin="294,73,10,321"/>
+            <Button x:Name="WedOpner" Click="Todo_Return" Opacity="0" Margin="294,134,10,254"/>
+            <Button x:Name="Thuopener" Click="Todo_Return" Opacity="0" Margin="294,196,10,194"/>
+            <Button x:Name="FriOpener" Click="Todo_Return" Opacity="0" Margin="294,256,10,132"/>
+            <Button x:Name="SatOpener" Click="Todo_Return" Opacity="0" Margin="294,318,118,70"/>
+            <Button x:Name="Sunopner" Click="Todo_Return" Opacity="0" Margin="294,380,118,10"/>
             <Button x:Name="AddStuff" Click="Test" Opacity="0" FocusVisualStyle="{x:Null}" Margin="659,389,10,8"/>
         </Grid>
     </StackPanel>
