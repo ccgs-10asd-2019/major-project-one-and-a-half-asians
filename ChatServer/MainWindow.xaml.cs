@@ -13,29 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HayStack
+namespace ChatterServer
 {
     /// <summary>
-    /// Interaction logic for Chatapp.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    /// Likely to be deleted
-    public partial class Chatapp : Page
+    public partial class MainWindow
     {
-        public EventHandler ladder;
-        public Chatapp()
+        public MainWindow()
         {
             InitializeComponent();
         }
 
-        public void ClimbLadder()
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ladder(this, EventArgs.Empty);
-        }
 
-        private void Chatapp_Return(object sender, RoutedEventArgs e)
-        {
-            ClimbLadder();
         }
-
     }
 }
