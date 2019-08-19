@@ -27,22 +27,6 @@ namespace Hey_Stack_Project
             InitializeComponent();
         }
 
-        private void TimetableBtnClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://nexus.ccgs.wa.edu.au/timetable");
-            //ShowMyTimetable();
-        }
-        //private void ShowMyTimetable()
-        //{
-        //    Timetable MyPage = new Timetable();
-        //    var TimetableContents = Content;
-        //    Content = MyPage;
-        //    MyPage.ladder += (object sender, EventArgs e) =>
-        //    {
-        //        Content = TimetableContents;
-        //    };
-        //}
-
 
         private void ChatAppBtnClick(object sender, RoutedEventArgs e)
         {
@@ -75,11 +59,16 @@ namespace Hey_Stack_Project
                 Content = TodoContents;
             };
         }
+        private void TimetableBtnClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://nexus.ccgs.wa.edu.au/timetable");
+        }
 
         private void ContactsBtnClick(object sender, RoutedEventArgs e)
         {
             ShowMyContacts();
         }
+
         private void ShowMyContacts()
         {
             Contacts MyPage = new Contacts();
@@ -90,7 +79,10 @@ namespace Hey_Stack_Project
                 Content = ContactsContents;
             };
         }
-
+        private void OpenGoogle(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.google.com/");
+        }
 
         private void InfoBtnClick(object sender, RoutedEventArgs e)
         {
@@ -117,9 +109,6 @@ namespace Hey_Stack_Project
             System.Diagnostics.Process.Start("https://nexus.ccgs.wa.edu.au/");
         }
 
-        private void OpenGoogle(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.google.com/");
-        }
+
     }
 }

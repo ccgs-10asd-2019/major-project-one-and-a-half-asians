@@ -150,5 +150,8 @@
   <ItemGroup>
     <Resource Include="MainWindow\ToDoTemplate.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\Logos\return-button.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
