@@ -5,20 +5,36 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HayStack"
       mc:Ignorable="d" 
-      d:DesignHeight="450"
-      Title="Todo" Width="720">
-    <StackPanel>
-        <Grid >
-            <Image HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="720" Source="MainWindow/ToDoTemplate.jpg"/>
-            <Button x:Name="TodoReturn" Click="Todo_Return" Opacity="0" Margin="659,336,10,61"/>
-            <Button x:Name="MonOpener" Click="Todo_Return" Opacity="0" Margin="294,10,29,382"/>
-            <Button x:Name="Tueopener" Click="Todo_Return" Opacity="0" Margin="294,73,10,321"/>
-            <Button x:Name="WedOpner" Click="Todo_Return" Opacity="0" Margin="294,134,10,254"/>
-            <Button x:Name="Thuopener" Click="Todo_Return" Opacity="0" Margin="294,196,10,194"/>
-            <Button x:Name="FriOpener" Click="Todo_Return" Opacity="0" Margin="294,256,10,132"/>
-            <Button x:Name="SatOpener" Click="Todo_Return" Opacity="0" Margin="294,318,118,70"/>
-            <Button x:Name="Sunopner" Click="Todo_Return" Opacity="0" Margin="294,380,118,10"/>
-            <Button x:Name="AddStuff" Click="Test" Opacity="0" FocusVisualStyle="{x:Null}" Margin="659,389,10,8"/>
-        </Grid>
-    </StackPanel>
+      d:DesignHeight="450" d:DesignWidth="620"
+      Title="Todo">
+
+    <Grid Background= "#B0E0E6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.3*" />
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.RowSpan="2" Grid.Row="1">
+            <StackPanel>
+                <Border CornerRadius="6" BorderBrush="Black" BorderThickness="6" HorizontalAlignment="Center" >
+                    <Button Height="50" Width="50" Background="blue"></Button>
+                </Border>
+                <Button Content="Monday" MinHeight="65" MinWidth="50" BorderBrush="Black" BorderThickness="6">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+                                <Ellipse Fill="Violet"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
 </Page>
