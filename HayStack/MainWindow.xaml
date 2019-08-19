@@ -333,9 +333,50 @@
                     </Style>
                 </Button.Style>
             </Button>
+            <Button x:Name="SettingButton" HorizontalAlignment="Left" Margin="21,351,0,0" VerticalAlignment="Top" Width="50" Height="50
+                    " Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="SettingBtnClick">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Image Source="MainWindow/Logos/settings.png" Margin="0,0,0,0"/>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ThicknessAnimation Duration="0:0:0.050" To="0" 
+                                                            Storyboard.TargetProperty="BorderThickness" />
+                                            <DoubleAnimation Duration="0:0:0.150" To="55" 
+                                                            Storyboard.TargetProperty="Height" />
+                                            <DoubleAnimation Duration="0:0:0.150" To="55" 
+                                                            Storyboard.TargetProperty="Width" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ThicknessAnimation Duration="0:0:0.050" To="0" 
+                                                            Storyboard.TargetProperty="BorderThickness" />
+                                            <DoubleAnimation Duration="0:0:0.150" To="50" 
+                                                            Storyboard.TargetProperty="Height" />
+                                            <DoubleAnimation Duration="0:0:0.150" To="50" 
+                                                            Storyboard.TargetProperty="Width" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
 
         </Grid>
     </StackPanel>
+
 
 
 </Window>

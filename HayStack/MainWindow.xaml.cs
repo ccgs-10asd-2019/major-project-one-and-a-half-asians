@@ -109,6 +109,20 @@ namespace Hey_Stack_Project
             System.Diagnostics.Process.Start("https://nexus.ccgs.wa.edu.au/");
         }
 
+        private void SettingBtnClick(object sender, RoutedEventArgs e)
+        {
+            ShowMySettings();
+        }
+        private void ShowMySettings()
+        {
+            Settings MyPage = new Settings();
+            var SettingsContent = Content;
+            Content = MyPage;
+            MyPage.ladder += (object sender, EventArgs e) =>
+            {
+                Content = SettingsContent;
+            };
+        }
 
     }
 }

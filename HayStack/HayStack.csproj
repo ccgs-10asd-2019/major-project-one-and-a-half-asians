@@ -58,14 +58,14 @@
     <Compile Include="Chatapp.xaml.cs">
       <DependentUpon>Chatapp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Contacts.xaml.cs">
       <DependentUpon>Contacts.xaml</DependentUpon>
     </Compile>
     <Compile Include="Info.xaml.cs">
       <DependentUpon>Info.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Timetable.xaml.cs">
-      <DependentUpon>Timetable.xaml</DependentUpon>
     </Compile>
     <Compile Include="Todo.xaml.cs">
       <DependentUpon>Todo.xaml</DependentUpon>
@@ -73,6 +73,10 @@
     <Page Include="Chatapp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Contacts.xaml">
       <SubType>Designer</SubType>
@@ -94,10 +98,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Timetable.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Todo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -152,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="MainWindow\Logos\return-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\Logos\settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
