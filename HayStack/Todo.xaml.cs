@@ -37,8 +37,9 @@ namespace HayStack
             ClimbLadder();
         }
 
-        private void Test(object sender, RoutedEventArgs e)
+        private void Fade(object sender, RoutedEventArgs e)
         {
+            Day.Visibility = Visibility.Visible;
         }
     }
 }
