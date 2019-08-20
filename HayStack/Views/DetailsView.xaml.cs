@@ -13,27 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HayStack
+namespace HayStack.Views
 {
     /// <summary>
-    /// Interaction logic for Contacts.xaml
+    /// Interaction logic for DetailsView.xaml
     /// </summary>
-    public partial class Contacts : Page
+    public partial class DetailsView : UserControl
     {
-        public EventHandler ladder;
-        public Contacts()
+        public DetailsView()
         {
             InitializeComponent();
-        }
-
-        public void ClimbLadder()
-        {
-            ladder(this, EventArgs.Empty);
-        }
-
-        private void Contacts_Return(object sender, RoutedEventArgs e)
-        {
-            ClimbLadder();
         }
     }
 }

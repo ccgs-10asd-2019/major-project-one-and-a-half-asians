@@ -40,6 +40,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,11 +63,19 @@
     <Compile Include="Chatapp.xaml.cs">
       <DependentUpon>Chatapp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContactsReal.xaml.cs">
+      <DependentUpon>ContactsReal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContactsViewModel.cs" />
+    <Compile Include="Helpers\BoolToVisibilityConverter.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Services\JsonContactDataService.cs" />
+    <Compile Include="Services\IDialogService.cs" />
+    <Compile Include="Services\IContactDataService.cs" />
+    <Compile Include="Services\MockDataService.cs" />
+    <Compile Include="Services\WindowDialogService.cs" />
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Contacts.xaml.cs">
-      <DependentUpon>Contacts.xaml</DependentUpon>
     </Compile>
     <Compile Include="Info.xaml.cs">
       <DependentUpon>Info.xaml</DependentUpon>
@@ -73,17 +83,30 @@
     <Compile Include="Todo.xaml.cs">
       <DependentUpon>Todo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utility\RelayCommand.cs" />
+    <Compile Include="Utility\ObservableObject.cs" />
+    <Compile Include="ViewModels\BookViewModel.cs" />
+    <Compile Include="ViewModels\ContactsViewModel.cs" />
+    <Compile Include="Views\BookView.xaml.cs">
+      <DependentUpon>BookView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactItemView.xaml.cs">
+      <DependentUpon>ContactItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetailsView.xaml.cs">
+      <DependentUpon>DetailsView.xaml</DependentUpon>
+    </Compile>
     <Page Include="Chatapp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContactsReal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Settings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Contacts.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Info.xaml">
       <SubType>Designer</SubType>
@@ -102,6 +125,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Todo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ContactItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetailsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -161,7 +196,14 @@
     <Resource Include="MainWindow\Logos\settings.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
+    <Resource Include="Resources\addIcon.png" />
+    <Resource Include="Resources\checkedStar.png" />
+    <Resource Include="Resources\createIcon.png" />
+    <Resource Include="Resources\defaultContact.png" />
+    <Resource Include="Resources\deleteIcon.png" />
+    <Resource Include="Resources\hoverStar.png" />
+    <Resource Include="Resources\saveIcon.png" />
+    <Resource Include="Resources\uncheckedStar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
