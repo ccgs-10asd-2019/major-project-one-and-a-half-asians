@@ -22,7 +22,7 @@
           Name="txtConversation"
           Text=""
           TextWrapping="Wrap"
-          VerticalScrollBarVisibility="Visible"/>
+          VerticalScrollBarVisibility="Visible" TextChanged="AutoScroll"/>
         <TextBox
           Height="33"
           HorizontalAlignment="Left"

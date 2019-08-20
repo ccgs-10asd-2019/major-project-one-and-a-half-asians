@@ -15,27 +15,6 @@
         </Grid.RowDefinitions>
         <StackPanel HorizontalAlignment="Left" Height="30" Margin="10,7,0,0" VerticalAlignment="Top" Grid.Row="0" Name="ImagePanel" Drop="ImagePanel_Drop" AllowDrop="true"/> 
         <ListBox ItemsSource="{Binding Path=Files}" Grid.Row="1" Name="DropBox" HorizontalAlignment="Left" Height="351" Margin="10,0,0,0" VerticalAlignment="Top" Width="768" AllowDrop="True" Drop="ImagePanel_Drop" Background="#FFE2E2E2" FontSize="10" DragEnter="ImagePanel_Enter"/>
-        <StatusBar Grid.Row="2" Height="22" VerticalAlignment="Bottom">
-            <StatusBar.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto" MinWidth="100"/>
-                        </Grid.ColumnDefinitions>
-                    </Grid>
-                </ItemsPanelTemplate>
-            </StatusBar.ItemsPanel>
-            <StatusBarItem>
-                <TextBlock Name="StatusIndicator" Text="Ready"></TextBlock>
-            </StatusBarItem>
-            <StatusBarItem Grid.Column="1">
-                <ProgressBar Width="100" Height="20" Name="ProgressBar"/>
-            </StatusBarItem>
-        </StatusBar>
         <Button x:Name="SettingsReturn" HorizontalAlignment="Left" Margin="10,-3,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Settings_Return">
             <Button.Template>
                 <ControlTemplate>

@@ -16,6 +16,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Threading;
 
+
 namespace HayStack
 {
     /// <summary>
@@ -55,7 +56,7 @@ namespace HayStack
         {
             if (string.IsNullOrEmpty(txtChatName.Text))
             {
-                this.txtConversation.Text += "Please input your name.";
+                this.txtConversation.Text += "Please input your name.\n";
                 return;
             }
 
@@ -75,7 +76,6 @@ namespace HayStack
                 }
                 else
                 {
-                   
                     tcpClient.Connect("127.0.0.1", 8000);
                     serverStream = tcpClient.GetStream();
                     AddPrompt();
@@ -84,9 +84,9 @@ namespace HayStack
                     serverStream.Flush();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                this.txtConversation.Text += "Can't connect. Reason can be :\r\n1.Server is down.\r\n2.You lost internet connection";
+                this.txtConversation.Text += "Can't connect. Reason can be :\r\n1.Server is down.\r\n2.You lost internet connection\n";
                 return;
             }
             // upload as javascript blob
@@ -132,6 +132,7 @@ namespace HayStack
                  this.txtConversation.Text += string.Format(
                           Environment.NewLine + Environment.NewLine +
                              ">> {0}", msg);
+                 Thread.Sleep(10);
 
              }));
         }
@@ -141,7 +142,7 @@ namespace HayStack
         private void AddPrompt()
         {
             txtConversation.Text = txtConversation.Text +
-                Environment.NewLine + " >> " + msg;
+                Environment.NewLine + msg;
         }
 
         // Purpose:     Send the text in typed by the user (stored in
@@ -149,12 +150,32 @@ namespace HayStack
         // End Result:  Sends text message to node.js (lamechat.js)
         private void cmdSendMessage_Click(object sender, RoutedEventArgs e)
         {
-            byte[] outStream = Encoding.ASCII.GetBytes(txtOutMsg.Text);
-            this.txtConversation.Text += string.Format(
-                 Environment.NewLine + Environment.NewLine +
-                 "You: {0}", txtOutMsg.Text);
-            serverStream.Write(outStream, 0, outStream.Length);
-            serverStream.Flush();
+
+            if (tcpClient.Connected == true)
+            {
+                if (!string.IsNullOrEmpty(txtOutMsg.Text))
+                {
+                    byte[] outStream = Encoding.ASCII.GetBytes(txtChatName.Text.Trim() + ": " + txtOutMsg.Text);
+                    this.txtConversation.Text += string.Format(
+                         Environment.NewLine + Environment.NewLine +
+                         ">> You: {0}", txtOutMsg.Text);
+                    serverStream.Write(outStream, 0, outStream.Length);
+                    serverStream.Flush();
+                }
+            }
+            
+            else
+            {
+                this.txtConversation.Text += "You are not connected to a server. Please connect to one before sending a message.\n";
+                return;
+            }
+            txtOutMsg.Text = String.Empty;
+
+        }
+
+        private void AutoScroll(object sender, TextChangedEventArgs e)
+        {
+            txtConversation.ScrollToEnd();
         }
     }
 }
