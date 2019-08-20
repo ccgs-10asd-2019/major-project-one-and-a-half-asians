@@ -37,8 +37,5 @@ namespace HayStack
             ClimbLadder();
         }
 
-        private void Test(object sender, RoutedEventArgs e)
-        {
-        }
     }
 }

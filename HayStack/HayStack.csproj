@@ -80,8 +80,12 @@
     <Compile Include="Info.xaml.cs">
       <DependentUpon>Info.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TaskManager.cs" />
     <Compile Include="Todo.xaml.cs">
       <DependentUpon>Todo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToDoReal.xaml.cs">
+      <DependentUpon>ToDoReal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utility\RelayCommand.cs" />
     <Compile Include="Utility\ObservableObject.cs" />
@@ -125,6 +129,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Todo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToDoReal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

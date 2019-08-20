@@ -7,12 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="621.403">
     <StackPanel>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="MainWindow/MainBackground.jpg" />
+        </StackPanel.Background>
         <DockPanel>
-            <Frame x:Name="Frame" NavigationUIVisibility="Hidden" />
+            <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>
         </DockPanel>
-        <Grid>
-
-            <Image HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="616" Source="MainWindow/MainBackground.jpg"/>
+        <Grid Height="420">
 
             <Button x:Name="ChatAppButton" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ChatAppBtnClick">
                 <Button.Template>
@@ -333,7 +334,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button x:Name="SettingButton" HorizontalAlignment="Left" Margin="21,351,0,0" VerticalAlignment="Top" Width="50" Height="50
+            <Button x:Name="SettingButton" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="50" Height="50
                     " Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="SettingBtnClick">
                 <Button.Template>
                     <ControlTemplate>

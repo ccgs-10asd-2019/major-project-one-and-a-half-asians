@@ -56,7 +56,7 @@ namespace Hey_Stack_Project
         }
         private void ShowMyToDo()
         {
-            Todo MyPage = new Todo();
+            ToDoReal MyPage = new ToDoReal();
             var TodoContents = Content;
             Content = MyPage;
             MyPage.ladder += (object sender, EventArgs e) =>
