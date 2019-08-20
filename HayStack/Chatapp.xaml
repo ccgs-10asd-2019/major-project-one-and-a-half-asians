@@ -16,7 +16,7 @@
           VerticalAlignment="Top"
           Width="144"
           Click="cmdConnect_Click"/>
-        <TextBox
+        <TextBox IsReadOnly="True" Style="{x:Null}" 
           AcceptsReturn="True"
           Margin="14,51,12,93"
           Name="txtConversation"
@@ -26,11 +26,10 @@
         <TextBox
           Height="33"
           HorizontalAlignment="Left"
-          Margin="240,10,0,0"
+          Margin="324,10,0,0"
           Name="txtChatName"
           VerticalAlignment="Top"
-          Width="148"
-          Text="Your Name"/>
+          Width="148"/>
         <TextBox
           Height="36"
           HorizontalAlignment="Left"
@@ -86,5 +85,6 @@
                 </Style>
             </Button.Style>
         </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="247,16,0,0" TextWrapping="Wrap" Text="Your Name:" VerticalAlignment="Top" Height="22" Width="77"/>
     </Grid>
 </Page>

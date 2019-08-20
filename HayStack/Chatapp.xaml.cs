@@ -53,15 +53,42 @@ namespace HayStack
         //              messages back to this tcp client application
         private void cmdConnect_Click(object sender, RoutedEventArgs e)
         {
-            AddPrompt();
-            tcpClient.Connect("127.0.0.1", 8000);
-            serverStream = tcpClient.GetStream();
+            if (string.IsNullOrEmpty(txtChatName.Text))
+            {
+                this.txtConversation.Text += "Please input your name.";
+                return;
+            }
 
-            byte[] outStream = Encoding.ASCII.GetBytes(txtChatName.Text.Trim()
-                                  + " is joining");
-            serverStream.Write(outStream, 0, outStream.Length);
-            serverStream.Flush();
+            try
+            {
+                if (tcpClient.Connected == true)
+                {
+                    
+                    TcpClient tcpClient = new TcpClient();
+                    tcpClient.Connect("127.0.0.1", 8000);
+                    serverStream = tcpClient.GetStream();
+                    AddPrompt();
+                    byte[] outStream = Encoding.ASCII.GetBytes(txtChatName.Text.Trim() + " is reconnecting");
+                    serverStream.Write(outStream, 0, outStream.Length);
+                    serverStream.Flush();
 
+                }
+                else
+                {
+                   
+                    tcpClient.Connect("127.0.0.1", 8000);
+                    serverStream = tcpClient.GetStream();
+                    AddPrompt();
+                    byte[] outStream = Encoding.ASCII.GetBytes(txtChatName.Text.Trim() + " is joining");
+                    serverStream.Write(outStream, 0, outStream.Length);
+                    serverStream.Flush();
+                }
+            }
+            catch (Exception ex)
+            {
+                this.txtConversation.Text += "Can't connect. Reason can be :\r\n1.Server is down.\r\n2.You lost internet connection";
+                return;
+            }
             // upload as javascript blob
             Task taskOpenEndpoint = Task.Factory.StartNew(() =>
             {
@@ -90,6 +117,9 @@ namespace HayStack
                     Thread.Sleep(500);
                 }
             });
+
+
+
         }
 
         // Purpose:     Updates the window with the newest message received
