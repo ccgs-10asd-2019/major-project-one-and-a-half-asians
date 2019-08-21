@@ -1,17 +1,52 @@
 ﻿<Page x:Class="HayStack.Chatapp"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:HayStack"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Chatapp">
-
-    <Grid>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="800"/>
-        <Label Content="ChatApp" HorizontalAlignment="Left" Margin="377,226,0,0" VerticalAlignment="Top" Height="28" Width="79"/>
-        <Button x:Name="ChatAppReturn" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Chatapp_Return">
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HayStack"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Background="White">
+        <Button
+          Content="Connect"
+          Height="29"
+          HorizontalAlignment="Left"
+          Margin="70,10,0,0"
+          Name="cmdConnect"
+          VerticalAlignment="Top"
+          Width="144"
+          Click="cmdConnect_Click"/>
+        <TextBox IsReadOnly="True" Style="{x:Null}" 
+          AcceptsReturn="True"
+          Margin="14,51,12,93"
+          Name="txtConversation"
+          Text=""
+          TextWrapping="Wrap"
+          VerticalScrollBarVisibility="Visible" TextChanged="AutoScroll"/>
+        <TextBox
+          Height="33"
+          HorizontalAlignment="Left"
+          Margin="324,10,0,0"
+          Name="txtChatName"
+          VerticalAlignment="Top"
+          Width="148"/>
+        <TextBox
+          Height="36"
+          HorizontalAlignment="Left"
+          Margin="12,271,0,0"
+          Name="txtOutMsg"
+          VerticalAlignment="Top"
+          Width="477"/>
+        <Button
+          Content="Send Message"
+          Height="28"
+          HorizontalAlignment="Left"
+          Margin="12,312,0,0"
+          Name="cmdSendMessage"
+          VerticalAlignment="Top"
+          Width="479"
+          Click="cmdSendMessage_Click"/>
+        <Button x:Name="ChatAppReturn" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Chatapp_Return">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="MainWindow/Logos/return-button.png"/>
@@ -50,6 +85,6 @@
                 </Style>
             </Button.Style>
         </Button>
-
+        <TextBlock HorizontalAlignment="Left" Margin="247,16,0,0" TextWrapping="Wrap" Text="Your Name:" VerticalAlignment="Top" Height="22" Width="77"/>
     </Grid>
 </Page>

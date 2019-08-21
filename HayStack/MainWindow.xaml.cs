@@ -56,7 +56,7 @@ namespace Hey_Stack_Project
         }
         private void ShowMyToDo()
         {
-            Todo MyPage = new Todo();
+            ToDoReal MyPage = new ToDoReal();
             var TodoContents = Content;
             Content = MyPage;
             MyPage.ladder += (object sender, EventArgs e) =>
@@ -73,16 +73,21 @@ namespace Hey_Stack_Project
         {
             ShowMyContacts();
         }
-
+        
+       
         private void ShowMyContacts()
         {
-            Contacts MyPage = new Contacts();
-            var ContactsContents = Content;
-            Content = MyPage;
-            MyPage.ladder += (object sender, EventArgs e) =>
-            {
-                Content = ContactsContents;
-            };
+            ContactsReal window2 = new ContactsReal();
+            window2.Show();
+            
+
+            //ContactsReal MyPage = new ContactsReal();
+            //var ContactsContents = Content;
+            //Content = MyPage;
+            //MyPage.ladder += (object sender, EventArgs e) =>
+            //{
+            //    Content = ContactsContents;
+            //};
         }
         private void OpenGoogle(object sender, RoutedEventArgs e)
         {

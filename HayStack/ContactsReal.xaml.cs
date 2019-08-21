@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,31 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HayStack
 {
     /// <summary>
-    /// Interaction logic for Todo.xaml
+    /// Interaction logic for ContactsReal.xaml
     /// </summary>
-    public partial class Todo : Page
+    public partial class ContactsReal : Window
     {
-        public EventHandler ladder;
-        public Todo()
+        public ContactsReal()
         {
             InitializeComponent();
         }
-
-        public void ClimbLadder()
-        {
-            ladder(this, EventArgs.Empty);
-        }
-
-        private void Todo_Return(object sender, RoutedEventArgs e)
-        {
-            ClimbLadder();
-        }
-
     }
 }
