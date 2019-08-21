@@ -48,7 +48,7 @@ namespace HayStack
         private void UnFade(object sender, RoutedEventArgs e)
         {
             FadeGrid.Visibility = Visibility.Collapsed;
-            Row1.Height = new GridLength(TitleSize);
+            //Row1.Height = new GridLength(TitleSize);
         }
 
     }

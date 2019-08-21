@@ -115,7 +115,7 @@
             </StackPanel>
         </ScrollViewer>
         <Button x:Name="StuffBox" Background="#b6ffea" Click="UnFade"  Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Grid.Row="0" Visibility="Collapsed"/>
-        
+
         <Grid x:Name="FadeGrid" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Grid.Row="0" Margin="55,0" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition x:Name="Row1" Height="1*" />
@@ -124,7 +124,7 @@
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
 
-
+            <Button Grid.Row="0" Grid.Column="0" Margin="-55,0" Grid.RowSpan="4" Background="#B0E0E6" Click="UnFade"/>
             <Border x:Name="RowB3" Grid.Row="3">
                 <Border.Effect>
                     <DropShadowEffect Color="Black"
