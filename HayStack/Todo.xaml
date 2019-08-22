@@ -19,23 +19,156 @@
             <RowDefinition Height="3*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
+
+
+
+
+
+
+
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.RowSpan="2" Grid.Row="1">
             <StackPanel>
-                <Border CornerRadius="6" BorderBrush="Black" BorderThickness="6" HorizontalAlignment="Center" >
-                    <Button Height="50" Width="50" Background="blue"></Button>
+                <Border CornerRadius="100" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center">
+                    <Button x:Name="Monday" Content="Mon" MinHeight="45" MinWidth="45" Click="Fade">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="#00FA9A"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </Border>
-                <Button Content="Monday" MinHeight="65" MinWidth="50" BorderBrush="Black" BorderThickness="6">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Grid>
-                                <Ellipse Fill="Ivory"/>
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Grid>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
+                <Border CornerRadius="100" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" >
+                    <Button x:Name="Tuesday" Content="Tue" MinHeight="45" MinWidth="45" Click="Fade">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="	#00CED1"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
+                <Border CornerRadius="100" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" >
+                    <Button x:Name="Wednesday" Content="Wed" MinHeight="45" MinWidth="45" Click="Fade">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="#00BFFF"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
+                <Border CornerRadius="100" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" >
+                    <Button x:Name="Thursday" Content="Thu" MinHeight="45" MinWidth="45" Click="Fade">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="#7B68EE"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
+                <Border CornerRadius="100" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" >
+                    <Button x:Name="Friday" Content="Fri" MinHeight="45" MinWidth="45" Click="Fade">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="#BA55D3"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
+                <Border CornerRadius="100" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" >
+                    <Button x:Name="Saturday" Content="Sat" MinHeight="45" MinWidth="45" Click="Fade">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="PaleVioletRed"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
+                <Border CornerRadius="100" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" >
+                    <Button x:Name="Sunday" Content="Sun" MinHeight="45" MinWidth="45" Click="Fade">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="DarkRed"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
             </StackPanel>
         </ScrollViewer>
+        <Button x:Name="StuffBox" Background="#b6ffea" Click="UnFade"  Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Grid.Row="0" Visibility="Collapsed"/>
+
+        <Grid x:Name="FadeGrid" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Grid.Row="0" Margin="55,0" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition x:Name="Row1" Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Margin="-55,0" Grid.RowSpan="4" Background="#B0E0E6" Click="UnFade"/>
+            <Border x:Name="RowB3" Grid.Row="3">
+                <Border.Effect>
+                    <DropShadowEffect Color="Black"
+                              Direction="270"
+                              BlurRadius="10"
+                              ShadowDepth="3" />
+                </Border.Effect>
+                <Grid Background="#332b72" />
+            </Border>
+            <Border x:Name="RowB2" Grid.Row="2">
+                <Border.Effect>
+                    <DropShadowEffect Color="Black"
+                              Direction="270"
+                              BlurRadius="10"
+                              ShadowDepth="3" />
+                </Border.Effect>
+                <Grid Background="#5469A4" />
+            </Border>
+            <Border x:Name="RowB1" Grid.Row="1">
+                <Border.Effect>
+                    <DropShadowEffect Color="Black"
+                              Direction="270"
+                              BlurRadius="10"
+                              ShadowDepth="3" />
+                </Border.Effect>
+                <Grid Background="#4FA0CF" />
+            </Border>
+            <Border x:Name="RowB0" Grid.Row="0">
+                <Border.Effect>
+                    <DropShadowEffect Color="Black"
+                              Direction="270"
+                              BlurRadius="10"
+                              ShadowDepth="3" />
+                </Border.Effect>
+                <Grid Background="#42CCC8" />
+            </Border>
+            <TextBlock x:Name="Title" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Segoe UI Black" FontSize="36" FontWeight="Bold" Text="Notmonday"/>
+    
+            
+
+        </Grid>
+
+
+
         <Button x:Name="ToDoReturn" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Todo_Return">
             <Button.Template>
                 <ControlTemplate>
@@ -75,5 +208,10 @@
                 </Style>
             </Button.Style>
         </Button>
+
+
     </Grid>
+
+
+
 </Page>
