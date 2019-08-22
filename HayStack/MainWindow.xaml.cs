@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Hey_Stack_Project
 {
     /// <summary>
@@ -77,9 +78,18 @@ namespace Hey_Stack_Project
        
         private void ShowMyContacts()
         {
-            ContactsReal window2 = new ContactsReal();
-            window2.Show();
             
+            if (!Application.Current.Windows.OfType<ContactsReal>().Any())
+            {
+                ContactsReal ContactPage = new ContactsReal();
+                ContactPage.Show();
+            } else
+            {
+                System.Windows.Forms.MessageBox.Show("Contacts is already open.");
+            }
+
+
+
 
             //ContactsReal MyPage = new ContactsReal();
             //var ContactsContents = Content;
@@ -89,6 +99,7 @@ namespace Hey_Stack_Project
             //    Content = ContactsContents;
             //};
         }
+
         private void OpenGoogle(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.google.com/");
