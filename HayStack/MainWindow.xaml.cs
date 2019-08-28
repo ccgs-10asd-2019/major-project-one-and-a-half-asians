@@ -77,9 +77,17 @@ namespace Hey_Stack_Project
        
         private void ShowMyContacts()
         {
-            ContactsReal window2 = new ContactsReal();
-            window2.Show();
-            
+
+            if (!Application.Current.Windows.OfType<ContactsReal>().Any())
+            {
+                ContactsReal ContactPage = new ContactsReal();
+                ContactPage.Show();
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Contacts is already open.");
+            }
+
 
             //ContactsReal MyPage = new ContactsReal();
             //var ContactsContents = Content;
