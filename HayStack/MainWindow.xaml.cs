@@ -78,17 +78,9 @@ namespace Hey_Stack_Project
        
         private void ShowMyContacts()
         {
-
-            if (!Application.Current.Windows.OfType<ContactsReal>().Any())
-            {
-                ContactsReal ContactPage = new ContactsReal();
-                ContactPage.Show();
-            }
-            else
-            {
-                System.Windows.Forms.MessageBox.Show("Contacts is already open.");
-            }
-
+            ContactsReal window2 = new ContactsReal();
+            window2.Show();
+            
 
             //ContactsReal MyPage = new ContactsReal();
             //var ContactsContents = Content;
@@ -98,6 +90,7 @@ namespace Hey_Stack_Project
             //    Content = ContactsContents;
             //};
         }
+
         private void OpenGoogle(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.google.com/");

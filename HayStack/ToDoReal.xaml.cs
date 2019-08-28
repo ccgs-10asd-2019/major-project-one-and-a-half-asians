@@ -100,6 +100,7 @@ namespace HayStack
                     Tasks.RemoveAt(index);
                     OnPropertyChanged("Tasks");
                 }
+                
             }
         }
         
@@ -108,10 +109,7 @@ namespace HayStack
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string name)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(name));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
         
 
