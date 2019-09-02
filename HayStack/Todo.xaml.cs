@@ -21,12 +21,12 @@ namespace HayStack
     /// </summary>
     public partial class Todo : Page
     {
+        public int TitleSize = 2;
         public EventHandler ladder;
         public Todo()
         {
             InitializeComponent();
         }
-
         public void ClimbLadder()
         {
             ladder(this, EventArgs.Empty);
@@ -35,6 +35,20 @@ namespace HayStack
         private void Todo_Return(object sender, RoutedEventArgs e)
         {
             ClimbLadder();
+        }
+
+        private void Fade(object sender, RoutedEventArgs e)
+        {
+            FadeGrid.Visibility = Visibility.Visible;
+            string chbxName = ((Button)sender).Name;
+            Title.Text = chbxName;
+
+        }
+
+        private void UnFade(object sender, RoutedEventArgs e)
+        {
+            FadeGrid.Visibility = Visibility.Collapsed;
+            //Row1.Height = new GridLength(TitleSize);
         }
 
     }

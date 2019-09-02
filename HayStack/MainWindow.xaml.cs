@@ -64,6 +64,22 @@ namespace Hey_Stack_Project
                 Content = TodoContents;
             };
         }
+
+        private void DesignClick(object sender, RoutedEventArgs e)
+        {
+            Designed();
+        }
+        private void Designed()
+        {
+            Todo MyPage = new Todo();
+            var TodoContents = Content;
+            Content = MyPage;
+            MyPage.ladder += (object sender, EventArgs e) =>
+            {
+                Content = TodoContents;
+            };
+        }
+
         private void TimetableBtnClick(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://nexus.ccgs.wa.edu.au/timetable");

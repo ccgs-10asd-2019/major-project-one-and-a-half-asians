@@ -120,7 +120,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition x:Name="Row1" Height="1*" />
                 <RowDefinition Height="1*" />
-                <RowDefinition Height="1*" />
+                <RowDefinition Height= "1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
 
