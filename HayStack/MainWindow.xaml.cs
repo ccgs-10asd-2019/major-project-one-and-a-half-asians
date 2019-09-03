@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Hey_Stack_Project
 {
     /// <summary>
@@ -31,11 +32,11 @@ namespace Hey_Stack_Project
         private void ChatAppBtnClick(object sender, RoutedEventArgs e)
         {
             ShowMyChatApp();
-        //Process p = new Process();
-        //need to figure this part out
-        //p.StartInfo = new ProcessStartInfo("C:\\Users\\isaac\\Documents\\Coding\\Major Project App\\ChatClient\\bin\\Debug\\ChatterClient.exe");
-        //p.Start();
-            
+            //Process p = new Process();
+            //need to figure this part out
+            //p.StartInfo = new ProcessStartInfo("C:\\Users\\isaac\\Documents\\Coding\\Major Project App\\ChatClient\\bin\\Debug\\ChatterClient.exe");
+            //p.Start();
+
         }
 
         private void ShowMyChatApp()
@@ -89,22 +90,21 @@ namespace Hey_Stack_Project
         {
             ShowMyContacts();
         }
-        
-       
+
+
         private void ShowMyContacts()
         {
-            ContactsReal window2 = new ContactsReal();
-            window2.Show();
-            
-
-            //ContactsReal MyPage = new ContactsReal();
-            //var ContactsContents = Content;
-            //Content = MyPage;
-            //MyPage.ladder += (object sender, EventArgs e) =>
-            //{
-            //    Content = ContactsContents;
-            //};
+            if (!Application.Current.Windows.OfType<ContactsReal>().Any())
+            {
+                ContactsReal ContactPage = new ContactsReal();
+                ContactPage.Show();
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Contacts is already open.");
+            }
         }
+
         private void OpenGoogle(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.google.com/");
