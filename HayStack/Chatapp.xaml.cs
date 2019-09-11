@@ -30,7 +30,7 @@ namespace HayStack
         TcpClient tcpClient = new TcpClient();
         NetworkStream serverStream = default(NetworkStream);
         string readData = string.Empty;
-        string msg = "Conected to Chat Server ...";
+        string msg = "Connected to Chat Server ...";
 
         public EventHandler ladder;
         public Chatapp()
@@ -66,7 +66,7 @@ namespace HayStack
                 {
                     
                     TcpClient tcpClient = new TcpClient();
-                    tcpClient.Connect("127.0.0.1", 8000);
+                    tcpClient.Connect("10.60.253.110", 4000);
                     serverStream = tcpClient.GetStream();
                     AddPrompt();
                     byte[] outStream = Encoding.ASCII.GetBytes(txtChatName.Text.Trim() + " is reconnecting");
@@ -76,7 +76,7 @@ namespace HayStack
                 }
                 else
                 {
-                    tcpClient.Connect("127.0.0.1", 8000);
+                    tcpClient.Connect("10.60.253.110", 4000);
                     serverStream = tcpClient.GetStream();
                     AddPrompt();
                     byte[] outStream = Encoding.ASCII.GetBytes(txtChatName.Text.Trim() + " is joining");
