@@ -35,5 +35,5 @@ var s = net.Server(function (socket) {
 
 });
 
-s.listen(8000);
-console.log('System waiting at http://localhost:8000');
+s.listen(4000);
+console.log('System waiting at http://localhost:4000');
