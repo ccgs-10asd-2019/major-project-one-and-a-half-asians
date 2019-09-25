@@ -66,7 +66,7 @@ namespace HayStack
                 {
                     
                     TcpClient tcpClient = new TcpClient();
-                    tcpClient.Connect("10.60.253.110", 4000);
+                    tcpClient.Connect("10.60.250.150", 4000);
                     serverStream = tcpClient.GetStream();
                     AddPrompt();
                     byte[] outStream = Encoding.ASCII.GetBytes(txtChatName.Text.Trim() + " is reconnecting");
@@ -76,7 +76,7 @@ namespace HayStack
                 }
                 else
                 {
-                    tcpClient.Connect("10.60.253.110", 4000);
+                    tcpClient.Connect("10.60.250.150", 4000);
                     serverStream = tcpClient.GetStream();
                     AddPrompt();
                     byte[] outStream = Encoding.ASCII.GetBytes(txtChatName.Text.Trim() + " is joining");
