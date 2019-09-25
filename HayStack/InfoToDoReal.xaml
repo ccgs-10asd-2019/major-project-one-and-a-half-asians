@@ -1,0 +1,52 @@
+﻿<Page x:Class="HayStack.ToDoRealInfo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HayStack"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ToDoRealInfo">
+
+    <Grid>
+        <Button x:Name="ToDoInfo" HorizontalAlignment="Left" Margin="745,25,0,0" VerticalAlignment="Top" Width="75" Height="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ReturnToDoBtnClick">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="MainWindow/Info.png"/>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimation Duration="0:0:0.050" To="0" 
+                                                            Storyboard.TargetProperty="BorderThickness" />
+                                        <DoubleAnimation Duration="0:0:0.150" To="90" 
+                                                            Storyboard.TargetProperty="Height" />
+                                        <DoubleAnimation Duration="0:0:0.150" To="90" 
+                                                            Storyboard.TargetProperty="Width" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimation Duration="0:0:0.050" To="0" 
+                                                            Storyboard.TargetProperty="BorderThickness" />
+                                        <DoubleAnimation Duration="0:0:0.150" To="75" 
+                                                            Storyboard.TargetProperty="Height" />
+                                        <DoubleAnimation Duration="0:0:0.150" To="75" 
+                                                            Storyboard.TargetProperty="Width" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Page>
