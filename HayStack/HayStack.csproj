@@ -222,5 +222,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\ToDoInfoTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\ExitButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

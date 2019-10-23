@@ -82,7 +82,7 @@ namespace HayStack
             Tasks.Add(new TaskManager(textBox.Text));
             serializeTasks();
         }
-
+        
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
             if (SelectedTask != null)
@@ -159,6 +159,15 @@ namespace HayStack
 
             }
         }
-        
+
+        public void ToDoInfoButtonClick(object sender, RoutedEventArgs e)
+        {
+            ToDoInfoStackPanel.Visibility = Visibility.Visible;
+        }
+
+        public void ToDoInfoExitButtonClick(object sender, RoutedEventArgs e)
+        {
+            ToDoInfoStackPanel.Visibility = Visibility.Collapsed;
+        }
     }
 }
