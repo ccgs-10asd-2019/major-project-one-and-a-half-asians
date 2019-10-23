@@ -45,6 +45,22 @@ namespace HayStack
 
         }
 
+
+        private void ToDoBtnClick(object sender, RoutedEventArgs e)
+        {
+            ShowMyToDo();
+        }
+        private void ShowMyToDo()
+        {
+            ToDoReal MyPage = new ToDoReal();
+            var TodoContents = Content;
+            Content = MyPage;
+            MyPage.ladder += (object sender, EventArgs e) =>
+            {
+                Content = TodoContents;
+            };
+        }
+
         private void UnFade(object sender, RoutedEventArgs e)
         {
             FadeGrid.Visibility = Visibility.Collapsed;

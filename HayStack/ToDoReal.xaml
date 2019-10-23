@@ -52,5 +52,44 @@
                 </Style>
             </Button.Style>
         </Button>
+        <Button x:Name="ToDoReturn_Copy" HorizontalAlignment="Left" Margin="709,99,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="CreatePopup">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="MainWindow/Logos/add.png"/>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimation Duration="0:0:0.050" To="0" 
+                                            Storyboard.TargetProperty="BorderThickness" />
+                                        <DoubleAnimation Duration="0:0:0.150" To="45" 
+                                            Storyboard.TargetProperty="Height" />
+                                        <DoubleAnimation Duration="0:0:0.150" To="45" 
+                                            Storyboard.TargetProperty="Width" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ThicknessAnimation Duration="0:0:0.050" To="0" 
+                                            Storyboard.TargetProperty="BorderThickness" />
+                                        <DoubleAnimation Duration="0:0:0.150" To="40" 
+                                            Storyboard.TargetProperty="Height" />
+                                        <DoubleAnimation Duration="0:0:0.150" To="40" 
+                                            Storyboard.TargetProperty="Width" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </Page>
