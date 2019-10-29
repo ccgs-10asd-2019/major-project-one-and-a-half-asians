@@ -33,9 +33,9 @@ namespace HayStack
             ClimbLadder();
         }
         public static string fileName = "tasks.bin";
-        
 
-        
+
+
         private ObservableCollection<TaskManager> tasks;
         public ObservableCollection<TaskManager> Tasks
         {
@@ -63,9 +63,9 @@ namespace HayStack
                 }
             }
         }
-        
 
-        
+
+
         public ToDoReal()
         {
             InitializeComponent();
@@ -74,15 +74,16 @@ namespace HayStack
             DataContext = this;
             deserializeTasks();
         }
-        
 
-       
+
+
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
             Tasks.Add(new TaskManager(textBox.Text));
+            textBox.Text = "";
             serializeTasks();
         }
-        
+
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
             if (SelectedTask != null)
@@ -99,21 +100,22 @@ namespace HayStack
                 {
                     Tasks.RemoveAt(index);
                     OnPropertyChanged("Tasks");
+                    serializeTasks();
                 }
-                
+
             }
         }
-        
 
-        
+
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
-        
 
-        
+
+
         public void serializeTasks()
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -171,3 +173,4 @@ namespace HayStack
         }
     }
 }
+
