@@ -56,7 +56,7 @@
             <Image Source="MainWindow/Info.png"/>
         </Button>
         <StackPanel x:Name="ToDoInfoStackPanel" Background="White" Orientation="Horizontal" Visibility="Collapsed">
-            <Image x:Name="ToDoInfoImage" Grid.Column ="0" Source="C:\User Program Files\MAJOR\HayStack\MainWindow\ToDoInfoTemplate.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75, 25, 0, 0" Width="650" Height="400"/>
+            <Image x:Name="ToDoInfoImage" Grid.Column ="0" Source="C:\User Program Files\MAJOR\HayStack\MainWindow\ToDoInfo.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75, 25, 0, 0" Width="650" Height="400"/>
             <Button x:Name="ToDoInfoExitButton" Grid.Column ="1" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ToDoInfoExitButtonClick">
                 <Image Source="MainWindow/ExitButton.png"/>
             </Button>

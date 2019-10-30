@@ -223,10 +223,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="MainWindow\ToDoInfoTemplate.png" />
+    <Resource Include="MainWindow\ExitButton.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="MainWindow\ExitButton.png" />
+    <Resource Include="MainWindow\ToDoInfo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
