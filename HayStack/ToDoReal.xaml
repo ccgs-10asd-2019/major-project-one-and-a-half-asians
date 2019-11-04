@@ -10,9 +10,9 @@
 
     <Grid Background="White">
         <DataGrid x:Name="dataGrid" SelectedItem="{Binding Path=SelectedTask, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tasks, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="296" Margin="10,144,0,0" VerticalAlignment="Top" Width="780"/>
-        <Button x:Name="buttonAdd" Click="buttonAdd_Click" Content="Add" HorizontalAlignment="Left" Margin="526,10,0,0" VerticalAlignment="Top" Width="125" Height="67" FontSize="20"/>
+        <Button x:Name="buttonAdd" Click="buttonAdd_Click" Content="Add" HorizontalAlignment="Left" Margin="526,15,0,0" VerticalAlignment="Top" Width="90" Height="67" FontSize="20"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="91" Margin="84,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="437"/>
-        <Button x:Name="buttonDelete" Click="buttonDelete_Click" Content="Delete" HorizontalAlignment="Left" Margin="654,10,0,0" VerticalAlignment="Top" Width="125" Height="67" RenderTransformOrigin="0.517,2.049" FontSize="20"/>
+        <Button x:Name="buttonDelete" Click="buttonDelete_Click" Content="Delete" HorizontalAlignment="Left" Margin="625,15,0,0" VerticalAlignment="Top" Width="90" Height="67" RenderTransformOrigin="0.517,2.049" FontSize="20"/>
         <Button x:Name="ToDoReturn" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Todo_Return">
             <Button.Template>
                 <ControlTemplate>
@@ -52,44 +52,14 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="ToDoReturn_Copy" HorizontalAlignment="Left" Margin="709,99,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="CreatePopup">
-            <Button.Template>
-                <ControlTemplate>
-                    <Image Source="MainWindow/Logos/add.png"/>
-                </ControlTemplate>
-            </Button.Template>
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <ThicknessAnimation Duration="0:0:0.050" To="0" 
-                                            Storyboard.TargetProperty="BorderThickness" />
-                                        <DoubleAnimation Duration="0:0:0.150" To="45" 
-                                            Storyboard.TargetProperty="Height" />
-                                        <DoubleAnimation Duration="0:0:0.150" To="45" 
-                                            Storyboard.TargetProperty="Width" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-                            <Trigger.ExitActions>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <ThicknessAnimation Duration="0:0:0.050" To="0" 
-                                            Storyboard.TargetProperty="BorderThickness" />
-                                        <DoubleAnimation Duration="0:0:0.150" To="40" 
-                                            Storyboard.TargetProperty="Height" />
-                                        <DoubleAnimation Duration="0:0:0.150" To="40" 
-                                            Storyboard.TargetProperty="Width" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.ExitActions>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
+        <Button x:Name="ToDoInfoButton" HorizontalAlignment="Left" Margin="725,18,0,0" VerticalAlignment="Top" Width="70" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ToDoInfoButtonClick">
+            <Image Source="MainWindow/Info.png"/>
         </Button>
+        <StackPanel x:Name="ToDoInfoStackPanel" Background="White" Orientation="Horizontal" Visibility="Collapsed">
+            <Image x:Name="ToDoInfoImage" Grid.Column ="0" Source="C:\User Program Files\MAJOR\HayStack\MainWindow\ToDoInfo.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75, 25, 0, 0" Width="650" Height="400"/>
+            <Button x:Name="ToDoInfoExitButton" Grid.Column ="1" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ToDoInfoExitButtonClick">
+                <Image Source="MainWindow/ExitButton.png"/>
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>
