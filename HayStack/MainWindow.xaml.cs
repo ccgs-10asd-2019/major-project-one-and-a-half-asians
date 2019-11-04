@@ -34,7 +34,7 @@ namespace Hey_Stack_Project
             //ShowMyChatApp();
             Process p = new Process();
             //need to figure this part out
-            p.StartInfo = new ProcessStartInfo("C:\\User Program Files\\MAJOR\\ChatterClient\\bin\\Debug\\ChatterClient.exe");
+            p.StartInfo = new ProcessStartInfo("C:\\User Program Files\\major-project-one-and-a-half-asians\\ChatterClient\\bin\\Debug\\ChatterClient.exe");
             p.Start();
 
         }

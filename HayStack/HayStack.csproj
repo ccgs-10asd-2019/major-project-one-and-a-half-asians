@@ -67,6 +67,9 @@
       <DependentUpon>ContactsReal.xaml</DependentUpon>
     </Compile>
     <Compile Include="ContactsViewModel.cs" />
+    <Compile Include="Elements.xaml.cs">
+      <DependentUpon>Elements.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\BoolToVisibilityConverter.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Services\JsonContactDataService.cs" />
@@ -102,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ContactsReal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -221,6 +228,12 @@
     <None Include="Resources\uncheckedStar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\ExitButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainWindow\ToDoInfo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

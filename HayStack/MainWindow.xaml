@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hey_Stack_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="621.403">
+        Title="MainWindow" Height="475" Width="815">
     <StackPanel>
         <StackPanel.Background>
             <ImageBrush ImageSource="MainWindow/MainBackground.jpg" />
@@ -13,9 +13,9 @@
         <DockPanel>
             <Frame x:Name="Frame" NavigationUIVisibility="Hidden"/>
         </DockPanel>
-        <Grid Height="420">
+        <Grid>
 
-            <Button x:Name="ChatAppButton" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ChatAppBtnClick">
+            <Button x:Name="ChatAppButton" HorizontalAlignment="Left" Margin="83,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ChatAppBtnClick">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Text.png" Margin="0,0,0,0"/>
@@ -55,7 +55,7 @@
                 </Button.Style>
             </Button>
 
-            <Button x:Name="ToDoButton" HorizontalAlignment="Left" Margin="130,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ToDoBtnClick">
+            <Button x:Name="ToDoButton" HorizontalAlignment="Left" Margin="266,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ToDoBtnClick">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Todo.png" Margin="0,0,0,0"/>
@@ -95,7 +95,7 @@
                 </Button.Style>
             </Button>
 
-            <Button x:Name="TimetableButton" HorizontalAlignment="Left" Margin="250,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="TimetableBtnClick">
+            <Button x:Name="TimetableButton" HorizontalAlignment="Left" Margin="449,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="TimetableBtnClick">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Timetable.png" Margin="0,0,0,0"/>
@@ -135,7 +135,7 @@
                 </Button.Style>
             </Button>
 
-            <Button x:Name="ContactsButton" HorizontalAlignment="Left" Margin="370,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ContactsBtnClick">
+            <Button x:Name="ContactsButton" HorizontalAlignment="Left" Margin="632,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ContactsBtnClick">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Contacts.png" Margin="0,0,0,0"/>
@@ -175,7 +175,7 @@
                 </Button.Style>
             </Button>
 
-            <Button x:Name="InternetButton" HorizontalAlignment="Left" Margin="490,20,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="OpenGoogle">
+            <Button x:Name="InternetButton" HorizontalAlignment="Left" Margin="586.25,140,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="OpenGoogle">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Browser.png" Margin="0,0,0,0"/>
@@ -215,47 +215,7 @@
                 </Button.Style>
             </Button>
 
-            <Button x:Name="InfoButton" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="InfoBtnClick">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Image Source="MainWindow/Info.png" Margin="0,0,0,0"/>
-                    </ControlTemplate>
-                </Button.Template>
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ThicknessAnimation Duration="0:0:0.050" To="0" 
-                                                            Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
-                                                            Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
-                                                            Storyboard.TargetProperty="Width" />
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ThicknessAnimation Duration="0:0:0.050" To="0" 
-                                                            Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
-                                                            Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
-                                                            Storyboard.TargetProperty="Width" />
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.ExitActions>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-
-            <Button x:Name="EmailButton" HorizontalAlignment="Left" Margin="130,140,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="OpenMail">
+            <Button x:Name="EmailButton" HorizontalAlignment="Left" Margin="128.75,140,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="OpenMail">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Mail.png" Margin="0,0,0,0"/>
@@ -295,7 +255,7 @@
                 </Button.Style>
             </Button>
 
-            <Button x:Name="NexusButton" HorizontalAlignment="Left" Margin="250,140,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="OpenNexus">
+            <Button x:Name="NexusButton" HorizontalAlignment="Left" Margin="357.5,140,0,0" VerticalAlignment="Top" Width="100" Height="100" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="OpenNexus">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Nexus.png" Margin="0,0,0,0"/>
