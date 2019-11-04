@@ -294,8 +294,8 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button x:Name="SettingButton" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="50" Height="50
-                    " Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="SettingBtnClick">
+            <Button x:Name="SettingButton" HorizontalAlignment="Left" Margin="29,345,0,0" VerticalAlignment="Top" Width="50" Height="50
+                    " Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="SettingBtnClick" RenderTransformOrigin="0.471,0.577">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Logos/settings.png" Margin="0,0,0,0"/>
@@ -334,7 +334,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-
+           
         </Grid>
     </StackPanel>
 

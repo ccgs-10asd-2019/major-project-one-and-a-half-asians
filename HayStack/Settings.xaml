@@ -13,8 +13,8 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <StackPanel HorizontalAlignment="Left" Height="30" Margin="10,7,0,0" VerticalAlignment="Top" Grid.Row="0" Name="ImagePanel" Drop="ImagePanel_Drop" AllowDrop="true"/> 
-        <ListBox ItemsSource="{Binding Path=Files}" Grid.Row="1" Name="DropBox" HorizontalAlignment="Left" Height="351" Margin="10,0,0,0" VerticalAlignment="Top" Width="768" AllowDrop="True" Drop="ImagePanel_Drop" Background="#FFE2E2E2" FontSize="10" DragEnter="ImagePanel_Enter"/>
+        <StackPanel HorizontalAlignment="Left" Height="30" Margin="10,7,0,0" VerticalAlignment="Top" Grid.Row="0" Name="ImagePanel" Drop="ImagePanel_Drop" AllowDrop="true"/>
+        <ListBox ItemsSource="{Binding Path=Files}" Grid.Row="1" Name="DropBox" HorizontalAlignment="Left" Height="210" Margin="139,170,0,0" VerticalAlignment="Top" Width="503" AllowDrop="True" Drop="ImagePanel_Drop" Background="#FFE2E2E2" FontSize="10" DragEnter="ImagePanel_Enter"/>
         <Button x:Name="SettingsReturn" HorizontalAlignment="Left" Margin="10,-3,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Settings_Return">
             <Button.Template>
                 <ControlTemplate>
@@ -55,5 +55,6 @@
             </Button.Style>
         </Button>
         <TextBlock TextWrapping="Wrap" Text="Drop your files below to upload them" FontSize="18" Margin="222,10,22,6"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="115" Margin="235,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="275"/>
     </Grid>
 </Page>

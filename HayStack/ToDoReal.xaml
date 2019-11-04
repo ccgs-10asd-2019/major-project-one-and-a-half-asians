@@ -60,7 +60,6 @@
             <Button x:Name="ToDoInfoExitButton" Grid.Column ="1" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ToDoInfoExitButtonClick">
                 <Image Source="MainWindow/ExitButton.png"/>
             </Button>
-
         </StackPanel>
     </Grid>
 </Page>

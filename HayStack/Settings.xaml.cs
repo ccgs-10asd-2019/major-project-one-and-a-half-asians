@@ -25,6 +25,7 @@ namespace HayStack
     public partial class Settings : Page
     {
         public EventHandler ladder;
+  
         public Settings()
         {
             InitializeComponent();
@@ -49,7 +50,7 @@ namespace HayStack
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             foreach (string file in files)
             {
-                MessageBox.Show(file);
+                image1.Source = new BitmapImage(new Uri(@file));
             }
         }
 
