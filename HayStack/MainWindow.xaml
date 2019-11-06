@@ -29,9 +29,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -41,9 +41,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -69,9 +69,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -81,9 +81,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -94,7 +94,7 @@
                 </Button.Style>
             </Button>
 
-            <Button x:Name="TimetableButton" HorizontalAlignment="Left" Margin="439,25,0,0" VerticalAlignment="Top" Width="125" Height="125" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="TimetableBtnClick">
+            <Button x:Name="TimetableButton" HorizontalAlignment="Left" Margin="444,35,0,0" VerticalAlignment="Top" Width="115" Height="115" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="TimetableBtnClick">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Timetable.png" Margin="0,0,0,0"/>
@@ -109,9 +109,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -121,9 +121,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="115" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="115" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -149,9 +149,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -161,9 +161,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -189,9 +189,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -201,9 +201,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -214,7 +214,7 @@
                 </Button.Style>
             </Button>
 
-            <Button x:Name="EmailButton" HorizontalAlignment="Left" Margin="110,175,0,0" VerticalAlignment="Top" Width="125" Height="125" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="OpenMail">
+            <Button x:Name="EmailButton" HorizontalAlignment="Left" Margin="115,180,0,0" VerticalAlignment="Top" Width="115" Height="115" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="OpenMail">
                 <Button.Template>
                     <ControlTemplate>
                         <Image Source="MainWindow/Mail.png" Margin="0,0,0,0"/>
@@ -229,9 +229,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -241,9 +241,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="115" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="115" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -269,9 +269,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="110" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="135" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
@@ -281,9 +281,9 @@
                                         <Storyboard>
                                             <ThicknessAnimation Duration="0:0:0.050" To="0" 
                                                             Storyboard.TargetProperty="BorderThickness" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Height" />
-                                            <DoubleAnimation Duration="0:0:0.150" To="100" 
+                                            <DoubleAnimation Duration="0:0:0.150" To="125" 
                                                             Storyboard.TargetProperty="Width" />
                                         </Storyboard>
                                     </BeginStoryboard>
