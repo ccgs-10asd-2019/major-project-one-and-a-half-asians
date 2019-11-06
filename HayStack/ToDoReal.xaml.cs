@@ -36,6 +36,9 @@ namespace HayStack
         public static string fileName = "tasks.bin";
 
         private ObservableCollection<TaskManager> tasks;
+
+        private ObservableCollection<TaskManager> subject;
+
         public ObservableCollection<TaskManager> Tasks
         {
             get { return tasks; }
@@ -45,6 +48,19 @@ namespace HayStack
                 {
                     tasks = value;
                     OnPropertyChanged("Tasks");
+                }
+            }
+        }
+
+        public ObservableCollection<TaskManager> Subject
+        {
+            get { return subject; }
+            set
+            {
+                if (value != subject)
+                {
+                    subject = value;
+                    OnPropertyChanged("Subject");
                 }
             }
         }
@@ -67,6 +83,7 @@ namespace HayStack
         {
             InitializeComponent();
             Tasks = new ObservableCollection<TaskManager>();
+            Subject = new ObservableCollection<TaskManager>();
             SelectedTask = null;
             DataContext = this;
             deserializeTasks();
@@ -75,7 +92,9 @@ namespace HayStack
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
             Tasks.Add(new TaskManager(textBox.Text));
+            Subject.Add(new TaskManager(SubjectChooser.Text));
             textBox.Text = "";
+            SubjectChooser.Text = "";
             serializeTasks();
         }
 
