@@ -32,7 +32,7 @@ namespace HayStack
         {
             ClimbLadder();
         }
-                              
+
         public static string fileName = "tasks.bin";
 
         private ObservableCollection<TaskManager> tasks;
@@ -78,13 +78,28 @@ namespace HayStack
                 }
             }
         }
-               
+
+        private TaskManager selectedSubject;
+        public TaskManager SelectedSubject
+        {
+            get { return selectedSubject; }
+            set
+            {
+                if (value != selectedSubject)
+                {
+                    selectedSubject = value;
+                    OnPropertyChanged("SelectedSubject");
+                }
+            }
+        }
+
         public ToDoReal()
         {
             InitializeComponent();
             Tasks = new ObservableCollection<TaskManager>();
             Subject = new ObservableCollection<TaskManager>();
             SelectedTask = null;
+            SelectedSubject = null;
             DataContext = this;
             deserializeTasks();
         }
@@ -114,6 +129,7 @@ namespace HayStack
                 {
                     Tasks.RemoveAt(index);
                     OnPropertyChanged("Tasks");
+                    OnPropertyChanged("Subjects");
                     serializeTasks();
                 }
             }
@@ -144,6 +160,22 @@ namespace HayStack
                 if (stream != null)
                     stream.Dispose();
             }
+
+
+            try
+            {
+                stream = File.Open("subjects.bin", FileMode.OpenOrCreate);
+                formatter.Serialize(stream, Subject);
+            }
+            catch
+            {
+                throw new DriveNotFoundException();
+            }
+            finally
+            {
+                if (stream != null)
+                    stream.Dispose();
+            }
         }
 
         public void deserializeTasks()
@@ -157,6 +189,7 @@ namespace HayStack
                 {
                     stream = File.Open(fileName, FileMode.Open);
                     Tasks = (ObservableCollection<TaskManager>)formatter.Deserialize(stream);
+
                 }
                 catch
                 {
@@ -182,4 +215,3 @@ namespace HayStack
         }
     }
 }
-

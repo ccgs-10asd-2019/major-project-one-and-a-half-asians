@@ -9,14 +9,26 @@
       Title="ToDoReal">
 
     <Grid Background="White">
-        <DataGrid x:Name="dataGrid" SelectedItem="{Binding Path=SelectedTask, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tasks, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="430" Margin="10,10,0,0" VerticalAlignment="Top" Width="505" >
+        <Rectangle HorizontalAlignment="Left" Height="450" Margin="515,0,0,0" Stroke="#9be3de" Fill="#9be3de"  VerticalAlignment="Top" Width="285"/>
+        <Rectangle HorizontalAlignment="Left" Height="450" Margin="0" Stroke="#40bfc1" Fill="#40bfc1"  VerticalAlignment="Top" Width="515"/>
+        <DataGrid x:Name="taskGrid" Background="#8186d5"  SelectedItem="{Binding Path=SelectedTask, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tasks, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="368" Margin="20,61,0,0" VerticalAlignment="Top" Width="469" >
 
-            
+
         </DataGrid>
-        <Button x:Name="buttonAdd" Click="buttonAdd_Click" Content="Add" HorizontalAlignment="Left" Margin="522,283,0,0" VerticalAlignment="Top" Width="140" Height="97" FontSize="20"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="126" Margin="603,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182" FontSize="18"/>
-        <Button x:Name="buttonDelete" Click="buttonDelete_Click" Content="Delete" HorizontalAlignment="Left" Margin="671,283,0,0" VerticalAlignment="Top" Width="123" Height="97" RenderTransformOrigin="0.517,2.049" FontSize="20"/>
-        <Button x:Name="ToDoReturn" HorizontalAlignment="Left" Margin="544,401,0,0" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Todo_Return">
+        
+        <Button x:Name="buttonAdd" Background="#4dd599" BorderBrush="Snow" Click="buttonAdd_Click" Content="Add" HorizontalAlignment="Left" Margin="522,297,0,0" VerticalAlignment="Top" Width="126" Height="78" FontSize="20" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.17"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="126" Margin="593,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" FontSize="18"/>
+        <Button x:Name="buttonDelete" Background="#ff6361" BorderBrush="Snow" Click="buttonDelete_Click" Content="Delete" HorizontalAlignment="Left" Margin="664,297,0,0" VerticalAlignment="Top" Width="126" Height="78" RenderTransformOrigin="0.517,2.049" FontSize="20"/>
+        <Button x:Name="ToDoReturn" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Todo_Return" Margin="20,10,0,0">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="MainWindow/Logos/return-button.png"/>
@@ -55,9 +67,6 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="ToDoInfoButton" HorizontalAlignment="Left" Margin="715,385,0,-5" VerticalAlignment="Top" Width="70" Height="70" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ToDoInfoButtonClick">
-            <Image Source="MainWindow/Info.png"/>
-        </Button>
         <StackPanel x:Name="ToDoInfoStackPanel" Background="White" Orientation="Horizontal" Visibility="Collapsed">
             <Image x:Name="ToDoInfoImage" Grid.Column ="0" Source="C:\User Program Files\MAJOR\HayStack\MainWindow\ToDoInfo.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75, 25, 0, 0" Width="650" Height="400"/>
             <Button x:Name="ToDoInfoExitButton" Grid.Column ="1" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ToDoInfoExitButtonClick">
@@ -74,9 +83,9 @@
             <ComboBoxItem>Elective Two</ComboBoxItem>
             <ComboBoxItem>Language</ComboBoxItem>
         </ComboBox>
-        <DatePicker x:Name="DateChooser" Margin="658,231,0,178" FontSize="16"></DatePicker>
-        <TextBlock HorizontalAlignment="Left" Margin="532,87,0,0" TextWrapping="Wrap" Text="Task:" VerticalAlignment="Top" FontWeight="Bold" FontSize="28"/>
-        <TextBlock HorizontalAlignment="Left" Margin="532,22,0,0" TextWrapping="Wrap" Text="Subject:" VerticalAlignment="Top" FontWeight="Bold" FontSize="28"/>
-        <TextBlock HorizontalAlignment="Left" Margin="522,231,0,0" TextWrapping="Wrap" Text="Due Date:" VerticalAlignment="Top" FontWeight="Bold" FontSize="28"/>
+        <DatePicker x:Name="DateChooser" Margin="658,228,10,181" FontSize="16"></DatePicker>
+        <TextBlock HorizontalAlignment="Left" Margin="522,87,0,0" TextWrapping="Wrap" Text="Task:" VerticalAlignment="Top" FontWeight="Bold" FontSize="28"/>
+        <TextBlock HorizontalAlignment="Left" Margin="522,23,0,0" TextWrapping="Wrap" Text="Subject:" VerticalAlignment="Top" FontWeight="Bold" FontSize="28"/>
+        <TextBlock HorizontalAlignment="Left" Margin="522,229,0,0" TextWrapping="Wrap" Text="Due Date:" VerticalAlignment="Top" FontWeight="Bold" FontSize="28"/>
     </Grid>
 </Page>
