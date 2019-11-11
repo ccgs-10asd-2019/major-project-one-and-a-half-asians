@@ -31,11 +31,11 @@ namespace Hey_Stack_Project
 
         private void ChatAppBtnClick(object sender, RoutedEventArgs e)
         {
-            //ShowMyChatApp();
-            Process p = new Process();
+            ShowMyChatApp();
+            //Process p = new Process();
             //need to figure this part out
-            p.StartInfo = new ProcessStartInfo("C:\\User Program Files\\major-project-one-and-a-half-asians\\ChatterClient\\bin\\Debug\\ChatterClient.exe");
-            p.Start();
+            //p.StartInfo = new ProcessStartInfo("C:\\User Program Files\\major-project-one-and-a-half-asians\\ChatterClient\\bin\\Debug\\ChatterClient.exe");
+            //p.Start();
 
         }
 
