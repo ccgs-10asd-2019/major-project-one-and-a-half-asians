@@ -204,14 +204,5 @@ namespace HayStack
             }
         }
 
-        public void ToDoInfoButtonClick(object sender, RoutedEventArgs e)
-        {
-            ToDoInfoStackPanel.Visibility = Visibility.Visible;
-        }
-
-        public void ToDoInfoExitButtonClick(object sender, RoutedEventArgs e)
-        {
-            ToDoInfoStackPanel.Visibility = Visibility.Collapsed;
-        }
     }
 }
